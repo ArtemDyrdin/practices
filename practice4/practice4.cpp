@@ -7,15 +7,12 @@
 using namespace std;
 
 void compose(vector<char>& numbers){
-
 	string number;
 	for (int i = 0; i < 64; i++) {	// переводим все числа в двоичную систему с макс длиной и складываем как строки
 		string binary = bitset<6>(i).to_string();
 		number += binary;
 	}
-
 	cout << "Все числа в двоичной системе: " << number << endl;
-
 	string num = "";
 	cout << endl << "Разбиваем по 8 знака" << endl;
 	int k = 1;
