@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <time.h>
 
 using namespace std;
 
@@ -7,7 +6,7 @@ void quickCopy(int *mas_a, int *mas_b, int N) {
     unsigned long long* source = (unsigned long long*)mas_a;
     unsigned long long* place = (unsigned long long*)mas_b;
 
-    // копируем по 8 байт
+    // копируем по long long
     for (int i = 0; i < N / sizeof(long long); i++) {
         *(place++) = *(source++);
     }
