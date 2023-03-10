@@ -82,16 +82,16 @@ int main()
 	Oy.setPosition(500.f, 0.f);
 
 	// плечо-предплечье
-	RectangleShape line11(Vector2f(static_cast<float>(50 * Arm.m_L1), 5.f));
-	RectangleShape line12(Vector2f(static_cast<float>(50 * Arm.m_L2), 5.f));
-	line11.setFillColor(Color::Red);
-	line12.setFillColor(Color::Yellow);
+	RectangleShape line1(Vector2f(static_cast<float>(50 * Arm.m_L1), 5.f));
+	RectangleShape line2(Vector2f(static_cast<float>(50 * Arm.m_L2), 5.f));
+	line1.setFillColor(Color::Red);
+	line2.setFillColor(Color::Yellow);
 
-	line11.setPosition(500.f, 900.f);
-	line12.setPosition(static_cast<float>(500 + 50 * Arm.m_x), static_cast<float>(900 - 50 * Arm.m_y));
+	line1.setPosition(500.f, 900.f);
+	line2.setPosition(static_cast<float>(500 + 50 * Arm.m_x), static_cast<float>(900 - 50 * Arm.m_y));
 
-	line11.rotate(-1 * Arm.m_alpha);
-	line12.rotate(-1 * Arm.m_beta);
+	line1.rotate(-1 * Arm.m_alpha);
+	line2.rotate(-1 * Arm.m_beta);
 
 	while (window.isOpen())
 	{
@@ -102,8 +102,8 @@ int main()
 				window.close();
 		}
 		window.clear();
-		window.draw(line11);
-		window.draw(line12);
+		window.draw(line1);
+		window.draw(line2);
 		window.draw(Ox);
 		window.draw(Oy);
 		window.display();
